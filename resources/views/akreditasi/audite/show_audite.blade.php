@@ -48,14 +48,11 @@
                                         @if ($AkreditasiPeriodeDetails->temuan == 'S')
                                             <span class="badge btn-info">{{ $AkreditasiPeriodeDetails->temuan }}</span>
                                         @elseif ($AkreditasiPeriodeDetails->temuan == 'OB')
-                                            <span
-                                                class="badge badge-warning">{{ $AkreditasiPeriodeDetails->temuan }}</span>
+                                            <span class="badge badge-warning">{{ $AkreditasiPeriodeDetails->temuan }}</span>
                                         @elseif ($AkreditasiPeriodeDetails->temuan == 'KTsM')
-                                            <span
-                                                class="badge badge-danger">{{ $AkreditasiPeriodeDetails->temuan }}</span>
+                                            <span class="badge badge-danger">{{ $AkreditasiPeriodeDetails->temuan }}</span>
                                         @elseif ($AkreditasiPeriodeDetails->temuan == 'KTsMi')
-                                            <span
-                                                class="badge badge-danger">{{ $AkreditasiPeriodeDetails->temuan }}</span>
+                                            <span class="badge badge-danger">{{ $AkreditasiPeriodeDetails->temuan }}</span>
                                         @endif
                                     </th>
                                 </tr>
@@ -96,8 +93,9 @@
                     <br><Span>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator !!}</Span>
                 </div>
                 <div class="form-group mb-0 mt-0">
-                    <label class="col-form-label-lg mb-0">Indikator Kinerja</label>
-                    <br><span>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator_kinerja !!}</span>
+                    <label class="col-form-label-lg mb-0">Indikator Sesuai </label> <label class="col-form-label-sm"> (Poin
+                        4)</label>
+                    <br><span>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator_4 !!}</span>
                 </div>
                 <div class="form-group mb-0 mt-0">
                     <label class="col-form-label-lg mb-0">Dokumen Terkait</label>
@@ -119,12 +117,28 @@
                     <label class="col-form-label-lg">Rekomendasi *</label>
                     <br><Span>{!! $AkreditasiPeriodeDetails->rekomendasi !!}</Span>
                 </div>
+                <div class="form-group mb-0">
+                    <label class="col-form-label-lg">Rencana Tindakan Koreksi (RTK) *</label>
+                    <textarea name="rtk" class="form-control form-control-sm @error('rtk') is-invalid @enderror" id="rtk">{{ old('rtk', $AkreditasiPeriodeDetails->rekomendasi) }}</textarea>
+                    @error('rtk')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
             </div>
         </div>
     </div>
 @endsection
 @section('js')
+    <script src="{{ asset('plugins/ckeditor/ckeditor.js') }}"></script>
     <script type="text/javascript">
+        ClassicEditor
+            .create(document.querySelector('#rtk'))
+            .catch(error => {
+                console.error(error);
+            });
+
         $(document).ready(function() {
             $('.toastsDefaultWarning').Toasts('create', {
                 class: 'bg-maroon',

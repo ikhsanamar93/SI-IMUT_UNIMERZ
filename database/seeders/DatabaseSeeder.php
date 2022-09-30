@@ -628,228 +628,243 @@ class DatabaseSeeder extends Seeder
         ]);
         // Dokumen Mutu --------------------------------------------------- Monev Kategori
         MonevKategori::create([
+            'nm_jenis_monev' => 'Kondisi Eksternal',
+            'no_jenis_monev' => 'A-Kondisi Eksternal',
+            'ket' => 'Dokumen untuk Kategori Kondisi Eksternal'
+        ]);
+        MonevKategori::create([
+            'nm_jenis_monev' => 'Profil UPPS',
+            'no_jenis_monev' => 'B-Profil UPPS',
+            'ket' => 'Dokumen untuk Kategori Profil UPPS'
+        ]);
+        MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria VMTS',
             'no_jenis_monev' => '01-Kriteria VMTS',
             'ket' => 'Dokumen untuk Kategori VMTS'
         ]);
         MonevKategori::create([
-            'nm_jenis_monev' => 'Kriteria SPMI, Tata Pamong & Tata Kelola',
+            'nm_jenis_monev' => 'Tata Pamong, Tata Kelola, dan Kerjasama',
             'no_jenis_monev' => '02-Kriteria TP-TK',
-            'ket' => 'Dokumen untuk Kategori SPMI, Tata Pamong & Tata Kelola'
-        ]);
-        MonevKategori::create([
-            'nm_jenis_monev' => 'Monev Kerjasama',
-            'no_jenis_monev' => '03-Kerjasama',
-            'ket' => 'Dokumen untuk Kategori Kerjasama'
+            'ket' => 'Dokumen untuk Kategori Tata Pamong, Tata Kelola, dan Kerjasama'
         ]);
         MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria Kemahasiswaan',
-            'no_jenis_monev' => '04-Kemahasiswaan',
+            'no_jenis_monev' => '03-Kemahasiswaan',
             'ket' => 'Dokumen untuk Kategori Kemahasiswaan'
         ]);
         MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria SDM',
-            'no_jenis_monev' => '05-SDM',
+            'no_jenis_monev' => '04-SDM',
             'ket' => 'Dokumen untuk Kategori SDM'
         ]);
         MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria Keuangan dan Sarpras',
-            'no_jenis_monev' => '06-Keu-Sarpras',
+            'no_jenis_monev' => '05-Keu-Sarpras',
             'ket' => 'Dokumen untuk Kategori Keuangan dan Sarpras'
         ]);
         MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria Pendidikan',
-            'no_jenis_monev' => '07-Pendidikan',
+            'no_jenis_monev' => '06-Pendidikan',
             'ket' => 'Dokumen untuk Kategori Pendidikan'
         ]);
         MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria Penelitian',
-            'no_jenis_monev' => '08-Penelitian',
+            'no_jenis_monev' => '07-Penelitian',
             'ket' => 'Dokumen untuk Kategori Penelitian'
         ]);
         MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria Pengabdian Masyarakat',
-            'no_jenis_monev' => '09-PKM',
+            'no_jenis_monev' => '08-PKM',
             'ket' => 'Dokumen untuk Kategori Pengabdian Masyarakat'
         ]);
         MonevKategori::create([
             'nm_jenis_monev' => 'Kriteria Luaran dan Capaian Tri Darma',
-            'no_jenis_monev' => '10-Luaran',
+            'no_jenis_monev' => '09-Luaran',
             'ket' => 'Dokumen untuk Kategori Luaran dan Capaian Tri Darma'
+        ]);
+        MonevKategori::create([
+            'nm_jenis_monev' => 'Suplemen UPPS/PS',
+            'no_jenis_monev' => 'D-Suplemen',
+            'ket' => 'Dokumen untuk Kategori Suplemen UPPS/PS'
+        ]);
+        MonevKategori::create([
+            'nm_jenis_monev' => 'Analisis Pengembangan UPPS/PS',
+            'no_jenis_monev' => 'E-SWOT',
+            'ket' => 'Dokumen untuk Kategori Analisis Pengembangan UPPS/PS'
         ]);
         // Monev Kategori --------------------------------------------------- Monev Master
         MonevMaster::create([
             'nm_monev' => 'Monev Pemahaman VMTS',
             'no_monev' => '01-Pemahaman VMTS',
-            'monev_kategori_id' => '1',
+            'monev_kategori_id' => '3',
             'ket' => 'Monev untuk Kategori Pemahaman VMTS'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev RENSTRA',
             'no_monev' => '02-Monev RENSTRA',
-            'monev_kategori_id' => '1',
+            'monev_kategori_id' => '3',
             'ket' => 'Monev untuk Kategori RENSTRA'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Terhadap Manajemen',
             'no_monev' => '03-Monev Manajemen',
-            'monev_kategori_id' => '2',
+            'monev_kategori_id' => '4',
             'ket' => 'Monev untuk Kategori Kepuasan Terhadap Manajemen'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev SPMI',
             'no_monev' => '04-Monev SPMI',
-            'monev_kategori_id' => '2',
+            'monev_kategori_id' => '4',
             'ket' => 'Monev untuk Kategori SPMI'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Umpan Balik Kerjasama',
             'no_monev' => '05-Monev Kerjasama',
-            'monev_kategori_id' => '3',
+            'monev_kategori_id' => '4',
             'ket' => 'Monev untuk Kategori Umpan Balik Kerjasama'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Mahasiswa Terhadap Dosen',
             'no_monev' => '06-Monev Mahasiswa',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Kepuasan Mahasiswa Terhadap Dosen'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Mahasiswa Terhadap Tendik',
             'no_monev' => '07-Monev Mahasiswa',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Kepuasan Mahasiswa Terhadap Tendik'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Mahasiswa Terhadap Pimpinan',
             'no_monev' => '08-Monev Mahasiswa',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Kepuasan Mahasiswa Terhadap Pimpinan'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Mahasiswa Terhadap Sarpras',
             'no_monev' => '09-Monev Mahasiswa',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Kepuasan Mahasiswa Terhadap Sarpras'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Evaluasi Dosen Oleh Mahasiswa',
             'no_monev' => '10-Monev EDOM',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Evaluasi Dosen Oleh Mahasiswa'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Mahasiswa Terhadap Dosen PA',
             'no_monev' => '11-Monev PA',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Kepuasan Mahasiswa Terhadap Layanan Dosen PA'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Mahasiswa Terhadap PMB',
             'no_monev' => '12-Monev PMB',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Kepuasan Mahasiswa Terhadap Layanan PMB'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Mahasiswa Terhadap Layanan',
             'no_monev' => '13-Monev Layanan',
-            'monev_kategori_id' => '4',
+            'monev_kategori_id' => '5',
             'ket' => 'Monev untuk Kategori Kepuasan Mahasiswa Terhadap Layanan Layanan'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Dosen',
             'no_monev' => '14-Kepuasan Dosen',
-            'monev_kategori_id' => '5',
+            'monev_kategori_id' => '6',
             'ket' => 'Monev untuk Kategori Kepuasan Dosen'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Tendik',
             'no_monev' => '15-Kepuasan Tendik',
-            'monev_kategori_id' => '5',
+            'monev_kategori_id' => '6',
             'ket' => 'Monev untuk Kategori Kepuasan Tendik'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev BKD/LKD',
             'no_monev' => '16-Monev BKD/LKD',
-            'monev_kategori_id' => '5',
+            'monev_kategori_id' => '6',
             'ket' => 'Monev untuk Kategori BKD/LKD'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev DP3/KPI',
             'no_monev' => '17-Monev DP3/KPI',
-            'monev_kategori_id' => '5',
+            'monev_kategori_id' => '6',
             'ket' => 'Monev untuk Kategori DP3/KPI'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Keuangan',
             'no_monev' => '18-Monev Keuangan',
-            'monev_kategori_id' => '6',
+            'monev_kategori_id' => '7',
             'ket' => 'Monev untuk Kategori Keuangan'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev SARPRAS',
             'no_monev' => '19-Monev SARPRAS',
-            'monev_kategori_id' => '6',
+            'monev_kategori_id' => '7',
             'ket' => 'Monev untuk Kategori SARPRAS'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Pendidikan/Pembelajaran',
             'no_monev' => '20-Monev Pendidikan',
-            'monev_kategori_id' => '7',
+            'monev_kategori_id' => '8',
             'ket' => 'Monev untuk Kategori Pendidikan/Pembelajaran'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kurikulum',
             'no_monev' => '21-Monev Kurukulum',
-            'monev_kategori_id' => '7',
+            'monev_kategori_id' => '8',
             'ket' => 'Monev untuk Kategori Kurikulum'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Suasana Akademik',
             'no_monev' => '22-Monev Suasana',
-            'monev_kategori_id' => '7',
+            'monev_kategori_id' => '8',
             'ket' => 'Monev untuk Kategori Suasana Akademik'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Penelitian',
             'no_monev' => '23-Monev Penelitian',
-            'monev_kategori_id' => '8',
+            'monev_kategori_id' => '9',
             'ket' => 'Monev untuk Kategori Kepuasan Penelitian'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Pembimbingan Tugas Akhir',
             'no_monev' => '24-Monev TA',
-            'monev_kategori_id' => '8',
+            'monev_kategori_id' => '9',
             'ket' => 'Monev untuk Kategori Kepuasan Pembimbingan Tugas Akhir'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Pengabdian Masyarakat',
             'no_monev' => '25-Monev PKM',
-            'monev_kategori_id' => '9',
+            'monev_kategori_id' => '10',
             'ket' => 'Monev untuk Kategori Kepuasan Pengabdian Masyarakat'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan KKN/PKL',
             'no_monev' => '26-Monev KKN',
-            'monev_kategori_id' => '9',
+            'monev_kategori_id' => '10',
             'ket' => 'Monev untuk Kategori Kepuasan KKN/PKL'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Alumni',
             'no_monev' => '27-Monev Alumni',
-            'monev_kategori_id' => '10',
+            'monev_kategori_id' => '11',
             'ket' => 'Monev untuk Kategori Kepuasan Alumni'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Kepuasan Pengguna Lulusan',
             'no_monev' => '28-Monev Stakeholde',
-            'monev_kategori_id' => '10',
+            'monev_kategori_id' => '11',
             'ket' => 'Monev untuk Kategori Kepuasan Pengguna Lulusan'
         ]);
         MonevMaster::create([
             'nm_monev' => 'Monev Masa Tunggu Lulusan',
             'no_monev' => '29-Masa Tunggu',
-            'monev_kategori_id' => '10',
+            'monev_kategori_id' => '11',
             'ket' => 'Monev untuk Kategori Masa Tunggu Lulusan'
         ]);
         // Monev Master --------------------------------------------------- Unit Kategori
@@ -888,15 +903,43 @@ class DatabaseSeeder extends Seeder
         // Unit Kategori --------------------------------------------------- Unit Pengelola
         UnitPengelola::create([
             'nm_unit_pengelola' => 'Yayasan Pendidikan Islam Mega Rezky Makassar',
-            'no_unit_pengelola' => '01-YYS'
+            'no_unit_pengelola' => '01-YPI'
         ]);
         UnitPengelola::create([
             'nm_unit_pengelola' => 'Universitas Megarezky',
-            'no_unit_pengelola' => '02-Univ'
+            'no_unit_pengelola' => '02-UNIMERZ'
+        ]);
+        UnitPengelola::create([
+            'nm_unit_pengelola' => 'Fakultas Keperawatan dan Kebidanan',
+            'no_unit_pengelola' => '03-FKK'
+        ]);
+        UnitPengelola::create([
+            'nm_unit_pengelola' => 'Fakultas Farmasi',
+            'no_unit_pengelola' => '04-FARMASI'
+        ]);
+        UnitPengelola::create([
+            'nm_unit_pengelola' => 'Fakultas Teknologi Kesehatan',
+            'no_unit_pengelola' => '05-FATELKES'
+        ]);
+        UnitPengelola::create([
+            'nm_unit_pengelola' => 'Fakultas Keguruan dan Ilmu Pendidikan',
+            'no_unit_pengelola' => '06-FKIP'
+        ]);
+        UnitPengelola::create([
+            'nm_unit_pengelola' => 'Fakultas Ilmu Komputer',
+            'no_unit_pengelola' => '07-FIKOM'
+        ]);
+        UnitPengelola::create([
+            'nm_unit_pengelola' => 'Fakultas Ekonomi',
+            'no_unit_pengelola' => '08-EKONOMI'
+        ]);
+        UnitPengelola::create([
+            'nm_unit_pengelola' => 'Fakultas Hukum',
+            'no_unit_pengelola' => '09-HUKUM'
         ]);
         UnitPengelola::create([
             'nm_unit_pengelola' => 'Lembaga Penjaminan Mutu',
-            'no_unit_pengelola' => '03-LPM'
+            'no_unit_pengelola' => '10-LPM'
         ]);
         // Unit Pengelola --------------------------------------------------- Unit Master
         UnitMaster::create([
@@ -909,22 +952,310 @@ class DatabaseSeeder extends Seeder
             'ket' => 'Universitas Megarezky Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 750/KPT/I/2018'
         ]);
         UnitMaster::create([
-            'nm_unit' => 'Prodi S1 Farmasi',
+            'nm_unit' => 'Prodi S1 Ilmu Komputer',
             'no_unit' => '163020-48201',
             'no_penetapan_unit' => '2733/D/T/K-IX/2009',
             'tgl_penetapan_unit' => '2009-01-01',
             'unit_kategori_id' => '3',
-            'unit_pengelola_id' => '2',
-            'ket' => 'Prodi S1 Farmasi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 2733/D/T/K-IX/2009'
+            'unit_pengelola_id' => '7',
+            'ket' => 'Prodi S1 Ilmu Komputer Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 2733/D/T/K-IX/2009'
         ]);
         UnitMaster::create([
-            'nm_unit' => 'Prodi D3 Farmasi',
+            'nm_unit' => 'Prodi S1 Sistem Informasi',
             'no_unit' => '163020-48401',
             'no_penetapan_unit' => '758/KPT/I/2018',
             'tgl_penetapan_unit' => '2018-01-01',
             'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '7',
+            'ket' => 'Prodi S1 Sistem Informasi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 758/KPT/I/2018'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi Profesi Ners',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '3',
+            'ket' => 'Prodi Profesi Ners Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Ilmu Keperawatan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '3',
+            'ket' => 'Prodi S1 Ilmu Keperawatan Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi Profesi Bidan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '3',
+            'ket' => 'Prodi Profesi Bidan Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Kebidanan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '3',
+            'ket' => 'Prodi S1 Kebidanan Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Gizi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '3',
+            'ket' => 'Prodi S1 Gizi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi D3 Kebidanan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '3',
+            'ket' => 'Prodi D3 Kebidanan Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi Profesi Apoteker',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '4',
+            'ket' => 'Prodi Profesi Apoteker Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Farmasi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '4',
+            'ket' => 'Prodi S1 Farmasi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi D3 Farmasi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '4',
+            'ket' => 'Prodi D3 Farmasi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Administrasi Rumah Sakit',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi S1 Administrasi Rumah Sakit Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Biomedis',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi S1 Biomedis Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Bioinformatika',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi S1 Bioinformatika Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi D4 TLM',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi D4 TLM Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi D3 TLM',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi D3 TLM Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi D3 Teknik Gigi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi D3 Teknik Gigi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi D3 Kardiovaskular',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi D3 Kardiovaskular Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi D3 Optometri',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '5',
+            'ket' => 'Prodi D3 Optometri Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 PGSD',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '6',
+            'ket' => 'Prodi S1 PGSD Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 PENJAS',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '6',
+            'ket' => 'Prodi S1 PENJAS Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Pendidikan Bhs. Inggris',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '6',
+            'ket' => 'Prodi S1 Pendidikan Bhs. Inggris Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Pendidikan Sosiologi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '6',
+            'ket' => 'Prodi S1 Pendidikan Sosiologi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Pendidikan Teknologi Informasi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '6',
+            'ket' => 'Prodi S1 Pendidikan Teknologi Informasi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Kewirausahaan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '8',
+            'ket' => 'Prodi S1 Kewirausahaan Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Bisnis Digital',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '8',
+            'ket' => 'Prodi S1 Bisnis Digital Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Prodi S1 Hukum Bisnis',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '3',
+            'unit_pengelola_id' => '9',
+            'ket' => 'Prodi S1 Hukum Bisnis Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Fakultas Keperawatan dan Kebidanan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '2',
             'unit_pengelola_id' => '2',
-            'ket' => 'Prodi D3 Farmasi Ditetapkan oleh Menteri Pendidikan dan Kebudayaan Melaui SK Nomor: 758/KPT/I/2018'
+            'ket' => 'Fakultas Keperawatan dan Kebidanan Ditetapkan oleh Rektor Universitas Megarezky Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Fakultas Farmasi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '2',
+            'unit_pengelola_id' => '2',
+            'ket' => 'Fakultas Farmasi Ditetapkan oleh Rektor Universitas Megarezky Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Fakultas Teknologi Kesehatan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '2',
+            'unit_pengelola_id' => '2',
+            'ket' => 'Fakultas Teknologi Kesehatan Ditetapkan oleh Rektor Universitas Megarezky Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Fakultas Keguruan dan Ilmu Pendidikan',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '2',
+            'unit_pengelola_id' => '2',
+            'ket' => 'Fakultas Keguruan dan Ilmu Pendidikan Ditetapkan oleh Rektor Universitas Megarezky Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Fakultas Ilmu Komputer',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '2',
+            'unit_pengelola_id' => '2',
+            'ket' => 'Fakultas Ilmu Komputer Ditetapkan oleh Rektor Universitas Megarezky Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Fakultas Ekonomi',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '2',
+            'unit_pengelola_id' => '2',
+            'ket' => 'Fakultas Ekonomi Ditetapkan oleh Rektor Universitas Megarezky Melaui SK Nomor: 00/0000/00'
+        ]);
+        UnitMaster::create([
+            'nm_unit' => 'Fakultas Hukum',
+            'no_unit' => '0000-00',
+            'no_penetapan_unit' => '00/0000/00',
+            'tgl_penetapan_unit' => '2018-01-01',
+            'unit_kategori_id' => '2',
+            'unit_pengelola_id' => '2',
+            'ket' => 'Fakultas Hukum Ditetapkan oleh Rektor Universitas Megarezky Melaui SK Nomor: 00/0000/00'
         ]);
         // Unit Master --------------------------------------------------- Versi Master
         VersiMaster::create([
@@ -1574,19 +1905,129 @@ class DatabaseSeeder extends Seeder
             'ket' => 'Instrumen Akreditasi Institusi BAN-PT'
         ]);
         AkreditasiKategori::create([
-            'nm_kategori' => 'IAPS Profesi LAM-PT KES',
+            'nm_kategori' => 'IAPS Magister BAN-PT',
+            'no_kategori' => '02 BAN-PT',
+            'ket' => 'Instrumen Akreditasi Program Studi Magister BAN-PT'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana BAN-PT',
+            'no_kategori' => '03 BAN-PT',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana BAN-PT'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Profesi Apoteker LAM-PT KES',
+            'no_kategori' => '01 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Profesi Apoteker LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana Farmasi LAM-PT KES',
+            'no_kategori' => '02 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana Farmasi LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Diploma Farmasi LAM-PT KES',
             'no_kategori' => '03 LAM-PT KES',
-            'ket' => 'Instrumen Akreditasi Program Studi Profesi LAM-PT KES'
+            'ket' => 'Instrumen Akreditasi Program Studi Diploma Farmasi LAM-PT KES'
         ]);
         AkreditasiKategori::create([
-            'nm_kategori' => 'IAPS Sarjana LAM-PT KES',
+            'nm_kategori' => 'IAPS Sarjana Terapan TLM LAM-PT KES',
             'no_kategori' => '04 LAM-PT KES',
-            'ket' => 'Instrumen Akreditasi Program Studi Sarjana LAM-PT KES'
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana Terapan TLM LAM-PT KES'
         ]);
         AkreditasiKategori::create([
-            'nm_kategori' => 'IAPS Diploma LAM-PT KES',
+            'nm_kategori' => 'IAPS Diploma TLM LAM-PT KES',
             'no_kategori' => '05 LAM-PT KES',
-            'ket' => 'Instrumen Akreditasi Program Studi Diploma LAM-PT KES'
+            'ket' => 'Instrumen Akreditasi Program Studi Diploma TLM LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Profesi Ners LAM-PT KES',
+            'no_kategori' => '06 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Profesi Ners LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana Keperawatan LAM-PT KES',
+            'no_kategori' => '07 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana Keperawatan LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Profesi Bidan LAM-PT KES',
+            'no_kategori' => '08 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Profesi Bidan LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana Kebidanan LAM-PT KES',
+            'no_kategori' => '09 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana Kebidanan LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Diploma Kebidanan LAM-PT KES',
+            'no_kategori' => '10 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Diploma Kebidanan LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana Gizi LAM-PT KES',
+            'no_kategori' => '11 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana Gizi LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana ARS LAM-PT KES',
+            'no_kategori' => '12 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana ARS LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana Biomedis LAM-PT KES',
+            'no_kategori' => '13 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana Biomedis LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Diploma Teknik Gigi LAM-PT KES',
+            'no_kategori' => '14 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Diploma Teknik Gigi LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Diploma Teknik Kardiovaskular LAM-PT KES',
+            'no_kategori' => '15 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Diploma Teknik Kardiovaskular LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Diploma Optometri LAM-PT KES',
+            'no_kategori' => '16 LAM-PT KES',
+            'ket' => 'Instrumen Akreditasi Program Studi Diploma Optometri LAM-PT KES'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Magister LAM-PENDIDIKAN',
+            'no_kategori' => '01 LAM-PENDIDIKAN',
+            'ket' => 'Instrumen Akreditasi Program Studi Magister LAM-PENDIDIKAN'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana LAM-PENDIDIKAN',
+            'no_kategori' => '02 LAM-PENDIDIKAN',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana LAM-PENDIDIKAN'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Profesi LAM-PENDIDIKAN',
+            'no_kategori' => '03 LAM-PENDIDIKAN',
+            'ket' => 'Instrumen Akreditasi Program Studi Profesi LAM-PENDIDIKAN'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Magister LAM-INFOKOM',
+            'no_kategori' => '01 LAM-INFOKOM',
+            'ket' => 'Instrumen Akreditasi Program Studi Magister LAM-INFOKOM'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana LAM-INFOKOM',
+            'no_kategori' => '02 LAM-INFOKOM',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana LAM-INFOKOM'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana LAM-EKONOMI',
+            'no_kategori' => '01 LAM-EKONOMI',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana LAM-EKONOMI'
+        ]);
+        AkreditasiKategori::create([
+            'nm_kategori' => 'IAPS Sarjana LAM-HUKUM',
+            'no_kategori' => '01 LAM-HUKUM',
+            'ket' => 'Instrumen Akreditasi Program Studi Sarjana LAM-HUKUM'
         ]);
     }
 }

@@ -61,14 +61,16 @@ class AsesorController extends Controller
             'akreditasi_periode_id' => 'required',
             'akreditasi_kategori_id' => 'required',
             'akreditasi_master_id' => 'required',
-            'daftar_tilik' => 'required',
-            'observasi' => 'required',
-            'temuan' => 'required',
-            'uraian_temuan' => 'required',
-            'skor' => 'required',
-            'bobot_penilaian' => 'required',
-            'perolehan_skor' => 'required',
-            'rekomendasi' => 'required'
+            'daftar_tilik' => 'nullable',
+            'observasi' => 'nullable',
+            'temuan' => 'nullable',
+            'uraian_temuan' => 'nullable',
+            'skor' => 'nullable',
+            'bobot_penilaian' => 'nullable',
+            'perolehan_skor' => 'nullable',
+            'rekomendasi' => 'nullable',
+            'praktek_baik' => 'nullable',
+            'efektifitas_rtk' => 'nullable'
         ]);
 
         AkreditasiPeriodeDetail::where('id', $id)->update($validasi);

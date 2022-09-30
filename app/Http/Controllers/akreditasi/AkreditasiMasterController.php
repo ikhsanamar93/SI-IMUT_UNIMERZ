@@ -47,7 +47,10 @@ class AkreditasiMasterController extends Controller
             'no_akreditasi_master' => 'required',
             'elemen' => 'nullable',
             'indikator' => 'required',
-            'indikator_kinerja' => 'required',
+            'indikator_4' => 'required',
+            'indikator_3' => 'nullable',
+            'indikator_2' => 'nullable',
+            'indikator_1' => 'nullable',
             'dokumen_terkait' => 'nullable',
             'bobot_penilaian' => 'required'
         ]);
@@ -101,7 +104,10 @@ class AkreditasiMasterController extends Controller
             'no_akreditasi_master' => 'required',
             'elemen' => 'nullable',
             'indikator' => 'required',
-            'indikator_kinerja' => 'required',
+            'indikator_4' => 'required',
+            'indikator_3' => 'nullable',
+            'indikator_2' => 'nullable',
+            'indikator_1' => 'nullable',
             'dokumen_terkait' => 'nullable',
             'bobot_penilaian' => 'required'
         ]);

@@ -21,7 +21,10 @@ class CreateAkreditasiMastersTable extends Migration
             $table->string('no_akreditasi_master', 30)->nullable();
             $table->string('elemen')->nullable();
             $table->longText('indikator');
-            $table->longText('indikator_kinerja');
+            $table->longText('indikator_4');
+            $table->longText('indikator_3')->nullable();
+            $table->longText('indikator_2')->nullable();
+            $table->longText('indikator_1')->nullable();
             $table->text('dokumen_terkait')->nullable();
             $table->double('bobot_penilaian');
             $table->timestamps();

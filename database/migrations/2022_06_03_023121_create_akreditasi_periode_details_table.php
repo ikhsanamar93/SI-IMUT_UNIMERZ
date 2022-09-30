@@ -26,6 +26,9 @@ class CreateAkreditasiPeriodeDetailsTable extends Migration
             $table->double('bobot_penilaian')->nullable();
             $table->double('perolehan_skor')->nullable();
             $table->longText('rekomendasi')->nullable();
+            $table->longText('praktek_baik')->nullable();
+            $table->longText('efektifitas_rtk')->nullable();
+            $table->longText('rtk')->nullable();
             $table->timestamps();
         });
     }

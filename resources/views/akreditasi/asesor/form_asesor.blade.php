@@ -76,8 +76,27 @@
                         <br><Span>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator !!}</Span>
                     </div>
                     <div class="form-group mb-0 mt-0">
-                        <label class="col-form-label-lg mb-0">Indikator Kinerja</label>
-                        <br><span>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator_kinerja !!}</span>
+                        <label class="col-form-label-lg mb-0">Indikator Penilaian</label>
+                        <div class="table-responsive">
+                            <table class="table table-bordered" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Sesuai = Poin 4</th>
+                                        <th class="text-center">Observasi = Poin 3</th>
+                                        <th class="text-center">KTS-Mi = Poin 2</th>
+                                        <th class="text-center">KTS-Ma = Poin 1</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator_4 !!}</td>
+                                        <td>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator_3 !!}</td>
+                                        <td>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator_2 !!}</td>
+                                        <td>{!! $AkreditasiPeriodeDetails->akreditasi_master->indikator_1 !!}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="form-group mb-0 mt-0">
                         <label class="col-form-label-lg mb-0">Dokumen Terkait</label>
@@ -94,7 +113,8 @@
                         @enderror
                     </div>
                     <div class="form-group mb-0">
-                        <label class="col-form-label-lg">Observasi Asesor *</label>
+                        <label class="col-form-label-lg">Uraian Temuan * </label> <label class="col-form-label-sm">
+                            (PLOR)</label>
                         <textarea name="observasi" class="form-control form-control-sm @error('observasi') is-invalid @enderror" id="observasi">{{ old('observasi', $AkreditasiPeriodeDetails->observasi) }}</textarea>
                         @error('observasi')
                             <div class="invalid-feedback">
@@ -103,15 +123,27 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label class="col-form-label-lg">Analisis Penyebab * </label> <label class="col-form-label-sm">
+                            (Akar Masalah)</label>
+                        <textarea name="uraian_temuan" class="form-control form-control-sm @error('uraian_temuan') is-invalid @enderror"
+                            id="uraian_temuan">{{ old('uraian_temuan', $AkreditasiPeriodeDetails->uraian_temuan) }}</textarea>
+                        @error('uraian_temuan')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                        <small><i>Analisis Penyebab Boleh Kosong jika Temuan <b>Sesuai</b></i></small>
+                    </div>
+                    <div class="form-group">
                         <label class="col-form-label-lg">Temuan Asesor *</label>
                         <select name="temuan" class="form-control select2 " data-dropdown-css-class="select2-dark"
-                            style="width: 100%;" required>
+                            style="width: 100%;">
                             @if (old('temuan', $AkreditasiPeriodeDetails->temuan) == 'S')
                                 <option></option>
-                                <option value="S" selected>Sesuai</option>
-                                <option value="OB">Observasi</option>
-                                <option value="KTsM">KTs Mayor</option>
-                                <option value="KTsMi">KTs Minor</option>
+                                <option value="S" selected>Sesuai/Poin 4</option>
+                                <option value="OB">Observasi/Poin 3</option>
+                                <option value="KTsM">KTs Mayor/Poin 1</option>
+                                <option value="KTsMi">KTs Minor/Poin 2</option>
                             @elseif (old('temuan', $AkreditasiPeriodeDetails->temuan) == 'OB')
                                 <option></option>
                                 <option value="S">Sesuai</option>
@@ -132,22 +164,12 @@
                                 <option value="KTsMi" selected>KTs Minor</option>
                             @else
                                 <option></option>
-                                <option value="S">Sesuai</option>
-                                <option value="OB">Observasi</option>
-                                <option value="KTsM">KTs Mayor</option>
-                                <option value="KTsMi">KTs Minor</option>
+                                <option value="S">Sesuai/Poin 4</option>
+                                <option value="OB">Observasi/Poin 3</option>
+                                <option value="KTsM">KTs Mayor/Poin 2</option>
+                                <option value="KTsMi">KTs Minor/Poin 1</option>
                             @endif
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label-lg">Uraian Temuan *</label>
-                        <textarea name="uraian_temuan" class="form-control form-control-sm @error('uraian_temuan') is-invalid @enderror"
-                            id="uraian_temuan">{{ old('uraian_temuan', $AkreditasiPeriodeDetails->uraian_temuan) }}</textarea>
-                        @error('uraian_temuan')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
                     </div>
                     <div class="form-group">
                         <label class="col-form-label-lg">Penilaian Asesor *</label>
@@ -171,7 +193,7 @@
                                                     class="form-control @error('skor') is-invalid @enderror"
                                                     onkeypress="return hanyaAngka(event)"
                                                     value="{{ old('skor', $AkreditasiPeriodeDetails->skor) }}"
-                                                    placeholder="Penilaian Asesor" maxlength="20" required>
+                                                    placeholder="Penilaian Asesor" maxlength="20">
                                                 <span class="input-group-append">
                                                     <button type="button" class="btn btn-info btn-flat"
                                                         onClick="hitung()"><i class="fa fa-code"></i></button>
@@ -187,7 +209,7 @@
                                             <input type="text" name="bobot_penilaian" id="bobot_penilaian"
                                                 class="form-control @error('bobot_penilaian') is-invalid @enderror"
                                                 value="{{ $AkreditasiPeriodeDetails->akreditasi_master->bobot_penilaian }}"
-                                                maxlength="20" style="background-color: white" readonly required>
+                                                maxlength="20" style="background-color: white" readonly>
                                             @error('bobot_penilaian')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -216,6 +238,28 @@
                         <textarea name="rekomendasi" class="form-control form-control-sm @error('rekomendasi') is-invalid @enderror"
                             id="rekomendasi">{{ old('rekomendasi', $AkreditasiPeriodeDetails->rekomendasi) }}</textarea>
                         @error('rekomendasi')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label-lg">Praktik Baik </label> <label class="col-form-label-sm"> (Jika
+                            Ada) </label>
+                        <textarea name="praktek_baik" class="form-control form-control-sm @error('praktek_baik') is-invalid @enderror"
+                            id="praktek_baik">{{ old('praktek_baik', $AkreditasiPeriodeDetails->praktek_baik) }}</textarea>
+                        @error('praktek_baik')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label-lg">Efektifitas RTK </label> <label class="col-form-label-sm"> (Audit
+                            Periode Sebelumnya) </label>
+                        <textarea name="efektifitas_rtk" class="form-control form-control-sm @error('efektifitas_rtk') is-invalid @enderror"
+                            id="efektifitas_rtk">{{ old('efektifitas_rtk', $AkreditasiPeriodeDetails->efektifitas_rtk) }}</textarea>
+                        @error('efektifitas_rtk')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
@@ -272,6 +316,18 @@
 
         ClassicEditor
             .create(document.querySelector('#rekomendasi'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#praktek_baik'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#efektifitas_rtk'))
             .catch(error => {
                 console.error(error);
             });

@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-group mb-0 mt-0">
                     <label class="col-form-label-lg mb-0">Indikator Kinerja</label>
-                    <br><span>{!! $AkreditasiMaster->indikator_kinerja !!}</span>
+                    <br><span>{!! $AkreditasiMaster->indikator_4 !!}</span>
                 </div>
                 <div class="form-group mb-0 mt-0">
                     <label class="col-form-label-lg mb-0">Dokumen Terkait</label>
@@ -386,8 +386,7 @@
                     <div class="modal-body">
                         <input type="hidden" name="akreditasi_periode_id" value="{{ $AkreditasiPeriode->id }}"
                             readonly>
-                        <input type="hidden" name="akreditasi_master_id" value="{{ $AkreditasiMaster->id }}"
-                            readonly>
+                        <input type="hidden" name="akreditasi_master_id" value="{{ $AkreditasiMaster->id }}" readonly>
                         <input type="hidden" name="unit_master_id" value="{{ $AkreditasiPeriode->unit_master_id }}"
                             readonly>
                         <input type="hidden" name="mutu_periode_id" value="{{ $AkreditasiPeriode->mutu_periode_id }}"
@@ -435,8 +434,7 @@
                     <div class="modal-body">
                         <input type="hidden" name="akreditasi_periode_id" value="{{ $AkreditasiPeriode->id }}"
                             readonly>
-                        <input type="hidden" name="akreditasi_master_id" value="{{ $AkreditasiMaster->id }}"
-                            readonly>
+                        <input type="hidden" name="akreditasi_master_id" value="{{ $AkreditasiMaster->id }}" readonly>
                         <input type="hidden" name="unit_master_id" value="{{ $AkreditasiPeriode->unit_master_id }}"
                             readonly>
                         <input type="hidden" name="mutu_periode_id" value="{{ $AkreditasiPeriode->mutu_periode_id }}"
@@ -481,8 +479,7 @@
                     <div class="modal-body">
                         <input type="hidden" name="akreditasi_periode_id" value="{{ $AkreditasiPeriode->id }}"
                             readonly>
-                        <input type="hidden" name="akreditasi_master_id" value="{{ $AkreditasiMaster->id }}"
-                            readonly>
+                        <input type="hidden" name="akreditasi_master_id" value="{{ $AkreditasiMaster->id }}" readonly>
                         <input type="hidden" name="unit_master_id" value="{{ $AkreditasiPeriode->unit_master_id }}"
                             readonly>
                         <input type="hidden" name="mutu_periode_id" value="{{ $AkreditasiPeriode->mutu_periode_id }}"

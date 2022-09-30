@@ -144,10 +144,44 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label class="col-form-label-lg">Indikator Kinerja *</label>
-                        <textarea name="indikator_kinerja" class="form-control form-control-sm @error('indikator_kinerja') is-invalid @enderror"
-                            id="indikator_kinerja">{{ old('indikator_kinerja') }}</textarea>
-                        @error('indikator_kinerja')
+                        <label class="col-form-label-lg">Indikator Sesuai </label> <label class="col-form-label-sm"> (Poin
+                            4)*</label>
+                        <textarea name="indikator_4" class="form-control form-control-sm @error('indikator_4') is-invalid @enderror"
+                            id="indikator_4">{{ old('indikator_4') }}</textarea>
+                        @error('indikator_4')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label-lg">Indikator Observasi </label> <label class="col-form-label-sm">
+                            (Poin 3)</label>
+                        <textarea name="indikator_3" class="form-control form-control-sm @error('indikator_3') is-invalid @enderror"
+                            id="indikator_3">{{ old('indikator_3') }}</textarea>
+                        @error('indikator_3')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label-lg">Indikator KTS-Mi </label> <label class="col-form-label-sm"> (Poin
+                            2)</label>
+                        <textarea name="indikator_2" class="form-control form-control-sm @error('indikator_2') is-invalid @enderror"
+                            id="indikator_2">{{ old('indikator_2') }}</textarea>
+                        @error('indikator_2')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label-lg">Indikator KTS-Ma </label> <label class="col-form-label-sm"> (Poin
+                            1)</label>
+                        <textarea name="indikator_1" class="form-control form-control-sm @error('indikator_1') is-invalid @enderror"
+                            id="indikator_1">{{ old('indikator_1') }}</textarea>
+                        @error('indikator_1')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
@@ -198,7 +232,25 @@
             });
 
         ClassicEditor
-            .create(document.querySelector('#indikator_kinerja'))
+            .create(document.querySelector('#indikator_4'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#indikator_3'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#indikator_2'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#indikator_1'))
             .catch(error => {
                 console.error(error);
             });
