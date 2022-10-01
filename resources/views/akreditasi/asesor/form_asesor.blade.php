@@ -83,8 +83,8 @@
                                     <tr>
                                         <th class="text-center">Sesuai = Poin 4</th>
                                         <th class="text-center">Observasi = Poin 3</th>
-                                        <th class="text-center">KTS-Mi = Poin 2</th>
-                                        <th class="text-center">KTS-Ma = Poin 1</th>
+                                        <th class="text-center">KTs-Minor = Poin 2</th>
+                                        <th class="text-center">KTs-Mayor = Poin 1</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -142,32 +142,32 @@
                                 <option></option>
                                 <option value="S" selected>Sesuai/Poin 4</option>
                                 <option value="OB">Observasi/Poin 3</option>
-                                <option value="KTsM">KTs Mayor/Poin 1</option>
-                                <option value="KTsMi">KTs Minor/Poin 2</option>
+                                <option value="KTsM">KTs Minor/Poin 2</option>
+                                <option value="KTsMi">KTs Mayor/Poin 1</option>
                             @elseif (old('temuan', $AkreditasiPeriodeDetails->temuan) == 'OB')
                                 <option></option>
-                                <option value="S">Sesuai</option>
-                                <option value="OB" selected>Observasi</option>
-                                <option value="KTsM">KTs Mayor</option>
-                                <option value="KTsMi">KTs Minor</option>
-                            @elseif (old('temuan', $AkreditasiPeriodeDetails->temuan) == 'KTsM')
-                                <option></option>
-                                <option value="S">Sesuai</option>
-                                <option value="OB">Observasi</option>
-                                <option value="KTsM" selected>KTs Mayor</option>
-                                <option value="KTsMi">KTs Minor</option>
+                                <option value="S">Sesuai/Poin 4</option>
+                                <option value="OB" selected>Observasi/Poin 3</option>
+                                <option value="KTsM">KTs Minor/Poin2</option>
+                                <option value="KTsMi">KTs Mayor/Poin 1</option>
                             @elseif (old('temuan', $AkreditasiPeriodeDetails->temuan) == 'KTsMi')
                                 <option></option>
-                                <option value="S">Sesuai</option>
-                                <option value="OB">Observasi</option>
-                                <option value="KTsM">KTs Mayor</option>
-                                <option value="KTsMi" selected>KTs Minor</option>
+                                <option value="S">Sesuai/Poin 4</option>
+                                <option value="OB">Observasi/Poin 3</option>
+                                <option value="KTsM" selected>KTs Minor/Poin2</option>
+                                <option value="KTsMi">KTs Mayor/Poin 1</option>
+                            @elseif (old('temuan', $AkreditasiPeriodeDetails->temuan) == 'KTsM')
+                                <option></option>
+                                <option value="S">Sesuai/Poin 4</option>
+                                <option value="OB">Observasi/Poin 3</option>
+                                <option value="KTsM">KTs Minor/Poin2</option>
+                                <option value="KTsMi" selected>KTs Mayor/Poin 1</option>
                             @else
                                 <option></option>
                                 <option value="S">Sesuai/Poin 4</option>
                                 <option value="OB">Observasi/Poin 3</option>
-                                <option value="KTsM">KTs Mayor/Poin 2</option>
-                                <option value="KTsMi">KTs Minor/Poin 1</option>
+                                <option value="KTsM">KTs Minor/Poin 2</option>
+                                <option value="KTsMi">KTs Mayor/Poin 1</option>
                             @endif
                         </select>
                     </div>

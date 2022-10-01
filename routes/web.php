@@ -221,6 +221,7 @@ Route::group(['middleware' => ['auth', 'role:1,2,4']], function () {
     Route::get('/create_akreditasi_audite/{id}', [AuditeController::class, 'create'])->name('create_akreditasi_audite');
     Route::post('/save_akreditasi_audite', [AuditeController::class, 'store'])->name('save_akreditasi_audite');
     Route::get('/edit_akreditasi_audite/{id}', [AuditeController::class, 'edit'])->name('edit_akreditasi_audite');
+    Route::put('/update_akreditasi_audite/{id}', [AuditeController::class, 'update'])->name('update_akreditasi_audite');
 });
 
 Route::group(['middleware' => ['auth', 'role:1,3,4']], function () {

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('css')
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 @endsection
 @section('title', 'SI-IMUT | Form AMI SPMI')
 @section('content')
@@ -117,21 +117,33 @@
                     <label class="col-form-label-lg">Rekomendasi *</label>
                     <br><Span>{!! $AkreditasiPeriodeDetails->rekomendasi !!}</Span>
                 </div>
-                <div class="form-group mb-0">
-                    <label class="col-form-label-lg">Rencana Tindakan Koreksi (RTK) *</label>
-                    <textarea name="rtk" class="form-control form-control-sm @error('rtk') is-invalid @enderror" id="rtk">{{ old('rtk', $AkreditasiPeriodeDetails->rekomendasi) }}</textarea>
-                    @error('rtk')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                </div>
+                <form method="POST" action="{{ route('update_akreditasi_audite', $AkreditasiPeriodeDetails->id) }}"
+                    autocomplete="off">
+                    @csrf
+                    @method('PUT')
+                    <div class="form-group mb-0">
+                        <label class="col-form-label-lg">Rencana Tindakan Koreksi (RTK) *</label>
+                        <textarea name="rtk" class="form-control form-control-sm @error('rtk') is-invalid @enderror" id="rtk">{{ old('rtk', $AkreditasiPeriodeDetails->rtk) }}</textarea>
+                        @error('rtk')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+            </div>
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-sm btn-dark">
+                    <i class="far fa-check-circle"></i> Submit RTK
+                </button>
+                </form>
             </div>
         </div>
     </div>
 @endsection
 @section('js')
     <script src="{{ asset('plugins/ckeditor/ckeditor.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    @include('layouts.message')
     <script type="text/javascript">
         ClassicEditor
             .create(document.querySelector('#rtk'))

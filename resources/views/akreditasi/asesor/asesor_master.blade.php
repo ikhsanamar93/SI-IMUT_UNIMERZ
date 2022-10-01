@@ -28,7 +28,7 @@
                                 <th>#</th>
                                 <th>Instrumen</th>
                                 <th>Deskripsi</th>
-                                <th>Observasi</th>
+                                <th>Uraian</th>
                                 <th class="text-center">Temuan</th>
                                 <th class="text-center">Nilai</th>
                                 <th class="text-center">Audite</th>

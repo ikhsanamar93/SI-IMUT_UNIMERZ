@@ -31,9 +31,10 @@
                                 <th>#</th>
                                 <th>Instrumen</th>
                                 <th>Deskripsi</th>
-                                <th>Observasi</th>
+                                <th>Uraian</th>
                                 <th class="text-center">Temuan</th>
                                 <th class="text-center">Nilai</th>
+                                <th class="text-center">Audite</th>
                                 <th class="text-center"></th>
                             </tr>
                         </thead>
@@ -49,8 +50,7 @@
                                         @if ($AkreditasiPeriodeDetail->temuan == 'S')
                                             <span class="badge btn-info">{{ $AkreditasiPeriodeDetail->temuan }}</span>
                                         @elseif ($AkreditasiPeriodeDetail->temuan == 'OB')
-                                            <span
-                                                class="badge badge-warning">{{ $AkreditasiPeriodeDetail->temuan }}</span>
+                                            <span class="badge badge-warning">{{ $AkreditasiPeriodeDetail->temuan }}</span>
                                         @elseif ($AkreditasiPeriodeDetail->temuan == 'KTsM')
                                             <span class="badge badge-danger">{{ $AkreditasiPeriodeDetail->temuan }}</span>
                                         @elseif ($AkreditasiPeriodeDetail->temuan == 'KTsMi')
@@ -58,6 +58,12 @@
                                         @endif
                                     </td>
                                     <td class="text-center">{{ $AkreditasiPeriodeDetail->perolehan_skor }}</td>
+                                    <td class="text-center">
+                                        @if ($AkreditasiPeriodeDetail->rtk)
+                                            <a href="#" class="btn-sm btn-outline-dark"><i
+                                                    class="fa fa-check-double"></i></a>
+                                        @endif
+                                    </td>
                                     <td class="text-center"><a
                                             href="{{ route('edit_akreditasi_audite', Crypt::encrypt($AkreditasiPeriodeDetail->id)) }}"
                                             class="btn-sm btn-outline-primary">

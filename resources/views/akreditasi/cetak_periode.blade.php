@@ -63,32 +63,32 @@
                 </td> --}}
                 <td class="no-border" style="width: 8%; text-align: center" rowspan="2"></td>
                 <td class="no-border" style="text-align: center;">
-                    <span style="font-size:20px; font-weight:bold;">
-                        YAYASAN PELITA MAS PALU</span> <br>
-                    <span style="font-size:25px; font-weight:bold;">
-                        SEKOLAH TINGGI ILMU FARMASI</span> <br>
-                    <span class="text-uppercase" style="font-size:25px; font-weight:bold;">
-                        PELITA MAS PALU
-                    </span>
+                    <span style="font-size:30px; font-weight:bold;">
+                        UNIVERSITAS MEGAREZKY</span> <br>
+                    <span style="font-size:17px;">
+                        SK. Menristekdikti RI. No.1194/KPT/I/2018 Terakreditasi BAN PT</span> <br>
                 </td>
                 <td class="no-border" style="width: 8%" rowspan="2"></td>
             </tr>
             <tr>
                 <td class="no-border" style="line-height: 1; text-align: center">
-                    <span class="text-" style="font-size:13px;"">
-                        <i>Alamat Kampus: Jl. Wolter Monginsidi No. 106 A Telp/Fax. (0451)458681 Palu -
-                            Sulawesi Tengah <br> Email: stifapelitamaspalu@yahoo.co.id Website:
-                            www.stifapelitamas.ac.id
+                    <span class="text-" style="font-size:15px;"">
+                        <i>Alamat : Kampus JI. Antang Raya No. 43 Telp 0411-492401 / 496401 Fax 496614 <br>
+                            Website: https://www.universitasmegarezky.ac.id/ <br>
+                            Email : info@universitasmegarezkv.ac.id
                         </i></span>
                 </td>
             </tr>
         </table>
-        <br>
         <table class="no-border" width=" 100%" cellspacing="0">
             <tr>
                 <th class="no-border" style="text-align: center">
+                    <span style="font-size:15px; font-weight:bold;">
+                        LAPORAN AUDIT AKREDITASI
+                    </span><br>
                     <span style="font-size:18px; font-weight:bold;">
-                        LAPORAN AUDIT AKREDITASI</span> <br>
+                        OBSERVASI DAN TEMUAN ASESOR
+                    </span> <br>
                 </th>
             </tr>
         </table>

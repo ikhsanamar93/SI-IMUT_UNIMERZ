@@ -166,7 +166,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label class="col-form-label-lg">Indikator KTS-Mi </label> <label class="col-form-label-sm"> (Poin
+                        <label class="col-form-label-lg">Indikator KTs-Mi </label> <label class="col-form-label-sm"> (Poin
                             2)</label>
                         <textarea name="indikator_2" class="form-control form-control-sm @error('indikator_2') is-invalid @enderror"
                             id="indikator_2">{{ old('indikator_2') }}</textarea>
@@ -177,7 +177,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label class="col-form-label-lg">Indikator KTS-Ma </label> <label class="col-form-label-sm"> (Poin
+                        <label class="col-form-label-lg">Indikator KTs-Ma </label> <label class="col-form-label-sm"> (Poin
                             1)</label>
                         <textarea name="indikator_1" class="form-control form-control-sm @error('indikator_1') is-invalid @enderror"
                             id="indikator_1">{{ old('indikator_1') }}</textarea>

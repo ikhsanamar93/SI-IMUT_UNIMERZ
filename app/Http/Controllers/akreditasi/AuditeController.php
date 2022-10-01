@@ -123,6 +123,17 @@ class AuditeController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validasi = $request->validate([
+            'rtk' => 'nullable'
+        ]);
+
+        AkreditasiPeriodeDetail::where('id', $id)->update($validasi);
+
+        $message = [
+            'alert-type' => 'success',
+            'message' => 'Data Tersimpan.'
+        ];
+        return redirect()->route('edit_akreditasi_audite', encrypt($id))->with($message);
         // $AkreditasiPeriodeDetails = AkreditasiPeriodeDetail::with(['akreditasi_periode', 'akreditasi_kategori', 'akreditasi_master'])->where('akreditasi_periode_id', $id)->get();
         // $pdf = Pdf::loadView('akreditasi.cetak_periode');
     }
