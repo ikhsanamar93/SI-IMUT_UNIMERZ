@@ -5,7 +5,11 @@
 @endsection
 @section('title', 'SI-IMUT | Audit Akreditasi')
 @section('content')
-
+    <div class="col-md-12">
+        <a target="_blank" href="" class="btn btn-info"><i class="fa fa-table-cells-large"></i> Lap. Temuan</a>
+        <a target="_blank" href="" class="btn btn-warning"><i class="fa fa-chart-pie"></i> Lap. RTK</a>
+        <p></p>
+    </div>
     <div class="col-md-12">
         <div class="card card-outline card-gray-dark">
             <div class="card-header">
@@ -38,8 +42,9 @@
                         <tbody>
                             @foreach ($AkreditasiPeriodeDetails as $AkreditasiPeriodeDetail)
                                 <tr id="hide{{ $AkreditasiPeriodeDetail->id }}">
-                                    <td>{{ $AkreditasiPeriodeDetail->akreditasi_master->no_akreditasi_master }}</td>
-                                    <td>{{ $AkreditasiPeriodeDetail->akreditasi_master->monev_kategori->nm_jenis_monev }}
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $AkreditasiPeriodeDetail->akreditasi_master->no_akreditasi_master }}.
+                                        {{ $AkreditasiPeriodeDetail->akreditasi_master->monev_kategori->nm_jenis_monev }}
                                     </td>
                                     <td>{!! Str::limit(strip_tags($AkreditasiPeriodeDetail->akreditasi_master->indikator), $limit = 40, '...') !!}</td>
                                     <td>{!! Str::limit(strip_tags($AkreditasiPeriodeDetail->observasi), $limit = 40, '...') !!}</td>

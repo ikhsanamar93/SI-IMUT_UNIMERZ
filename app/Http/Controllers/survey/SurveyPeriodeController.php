@@ -19,8 +19,9 @@ class SurveyPeriodeController extends Controller
      */
     public function index()
     {
-        $UnitMasters = UnitMaster::orderby('unit_kategori_id', 'asc')->get();
-        return view('periode_survey.home_survey', compact('UnitMasters'));
+        $UnitMasters = UnitMaster::with(['unit_pengelola'])->where('unit_kategori_id', '!=', '3')->orderby('unit_kategori_id', 'asc')->get();
+        $UnitMasters1 = UnitMaster::with(['unit_pengelola'])->where('unit_kategori_id', '=', '3')->orderby('unit_pengelola_id', 'asc')->get();
+        return view('periode_survey.home_survey', compact('UnitMasters', 'UnitMasters1'));
     }
 
     /**

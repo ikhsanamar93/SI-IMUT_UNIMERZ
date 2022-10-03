@@ -153,12 +153,12 @@ Route::group(['middleware' => ['auth', 'role:1']], function () {
     Route::resource('/monev_kategori', MonevKategoriContoller::class);
     Route::resource('/monev_master', MonevMasterContoller::class);
 
-    Route::resource('/akreditasi_kategori', AkreditasiKategoriController::class);
-    Route::get('/akreditasi_master', [AkreditasiMasterController::class, 'index'])->name('akreditasi_master');
-    Route::get('/create_akreditasi_master/{id}', [AkreditasiMasterController::class, 'create'])->name('create_akreditasi_master');
-    Route::post('/save_akreditasi_master', [AkreditasiMasterController::class, 'store'])->name('save_akreditasi_master');
-    Route::get('/edit_akreditasi_master/{id}', [AkreditasiMasterController::class, 'edit'])->name('edit_akreditasi_master');
-    Route::put('/update_akreditasi_master/{id}', [AkreditasiMasterController::class, 'update'])->name('update_akreditasi_master');
+    // Route::resource('/akreditasi_kategori', AkreditasiKategoriController::class);
+    // Route::get('/akreditasi_master', [AkreditasiMasterController::class, 'index'])->name('akreditasi_master');
+    // Route::get('/create_akreditasi_master/{id}', [AkreditasiMasterController::class, 'create'])->name('create_akreditasi_master');
+    // Route::post('/save_akreditasi_master', [AkreditasiMasterController::class, 'store'])->name('save_akreditasi_master');
+    // Route::get('/edit_akreditasi_master/{id}', [AkreditasiMasterController::class, 'edit'])->name('edit_akreditasi_master');
+    // Route::put('/update_akreditasi_master/{id}', [AkreditasiMasterController::class, 'update'])->name('update_akreditasi_master');
 
     Route::get('/index_unit_kerja', [UnitMasterContoller::class, 'index'])->name('index_unit_kerja');
     Route::get('/add_unit_kerja', [UnitMasterContoller::class, 'create'])->name('add_unit_kerja');
@@ -215,6 +215,13 @@ Route::group(['middleware' => ['auth', 'role:1,2,4']], function () {
 
     Route::resource('/ami_master', AmiMasterContoller::class);
     Route::post('/save_ami', [AmiMasterContoller::class, 'save_ami'])->name('save_ami');
+
+    Route::resource('/akreditasi_kategori', AkreditasiKategoriController::class);
+    Route::get('/akreditasi_master', [AkreditasiMasterController::class, 'index'])->name('akreditasi_master');
+    Route::get('/create_akreditasi_master/{id}', [AkreditasiMasterController::class, 'create'])->name('create_akreditasi_master');
+    Route::post('/save_akreditasi_master', [AkreditasiMasterController::class, 'store'])->name('save_akreditasi_master');
+    Route::get('/edit_akreditasi_master/{id}', [AkreditasiMasterController::class, 'edit'])->name('edit_akreditasi_master');
+    Route::put('/update_akreditasi_master/{id}', [AkreditasiMasterController::class, 'update'])->name('update_akreditasi_master');
 
     Route::get('/akreditasi_audite', [AuditeController::class, 'index'])->name('akreditasi_audite');
     Route::get('/show_akreditasi_audite/{id}', [AuditeController::class, 'show'])->name('show_akreditasi_audite');

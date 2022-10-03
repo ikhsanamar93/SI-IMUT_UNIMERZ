@@ -34,7 +34,6 @@
                                 <th class="text-center">#</th>
                                 <th>Instrumen</th>
                                 <th>Kriteria Akreditasi</th>
-                                <th>Butir</th>
                                 <th>Deskripsi</th>
                                 <th class="text-center">Dok.</th>
                                 <th class="text-center">Bobot</th>
@@ -47,8 +46,9 @@
                                     aria-expanded="false">
                                     <td class="text-center">{{ $loop->iteration }}</td>
                                     <td>{{ $AkreditasiMaster->akreditasi_kategori->nm_kategori }}</td>
-                                    <td>{{ $AkreditasiMaster->monev_kategori->nm_jenis_monev }}</td>
-                                    <td>{{ $AkreditasiMaster->no_akreditasi_master }}</td>
+                                    <td>{{ $AkreditasiMaster->no_akreditasi_master }}.
+                                        {{ $AkreditasiMaster->monev_kategori->nm_jenis_monev }}
+                                    </td>
                                     <td>{{ Str::limit(strip_tags($AkreditasiMaster->indikator), $limit = 40, '...') }}
                                     </td>
                                     <td class="text-center">{{ $AkreditasiMaster->jenis_dokumen }}</td>

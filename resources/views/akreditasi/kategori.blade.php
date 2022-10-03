@@ -31,14 +31,16 @@
                         <textarea class="form-control form-control-sm" rows="4" name="ket" placeholder="Deskripsi Kategori ..."></textarea>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-sm btn-dark">
-                        <i class="far fa-check-circle"></i> Submit
-                    </button>
-                    <button type="reset" class="btn btn-sm btn-danger float-right">
-                        <i class="fa fa-cancel"></i> Cancel
-                    </button>
-                </div>
+                @can('super_admin')
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-sm btn-dark">
+                            <i class="far fa-check-circle"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-sm btn-danger float-right">
+                            <i class="fa fa-cancel"></i> Cancel
+                        </button>
+                    </div>
+                @endcan
             </form>
             <div class="modal fade" id="update">
                 <div class="modal-dialog">
@@ -109,11 +111,13 @@
                                     <td>{{ $AkreditasiKategori->nm_kategori }}</td>
                                     <td>{{ $AkreditasiKategori->no_kategori }}</td>
                                     <td>
-                                        <a href="javascript:void(0)" class="btn-sm btn-outline-success" onclick="edit(this)"
-                                            data-route="{{ route('akreditasi_kategori.edit', $AkreditasiKategori->id) }}"
-                                            data-toggle="modal" data-target="#update">
-                                            <i class="fa fa-edit fa-fw"></i>
-                                        </a>
+                                        @can('super_admin')
+                                            <a href="javascript:void(0)" class="btn-sm btn-outline-success" onclick="edit(this)"
+                                                data-route="{{ route('akreditasi_kategori.edit', $AkreditasiKategori->id) }}"
+                                                data-toggle="modal" data-target="#update">
+                                                <i class="fa fa-edit fa-fw"></i>
+                                            </a>
+                                        @endcan
                                         <a href="{{ route('akreditasi_kategori.show', Crypt::encrypt($AkreditasiKategori->id)) }}"
                                             class="btn-sm btn-outline-primary">
                                             <i class="fa fa-table-columns"></i>

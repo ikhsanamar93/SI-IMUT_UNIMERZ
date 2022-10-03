@@ -249,37 +249,39 @@
                                 </p>
                             </a>
                         </li>
-                        @can('super_admin')
-                            <li class="nav-item">
-                                <a href="{{ route('index') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-crosshairs"></i>
-                                    <p>
-                                        Instrumen Akreditasi
-                                        <i class="right fas fa-angle-left"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-crosshairs"></i>
+                                <p>
+                                    Instrumen Akreditasi
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                @can('super_admin')
                                     <li class="nav-item">
                                         <a href="{{ route('monev_kategori.index') }}" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Kriteria Akreditasi</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('akreditasi_kategori.index') }}" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Kategori Akreditasi</p>
-                                        </a>
-                                    </li>
+                                @endcan
+                                <li class="nav-item">
+                                    <a href="{{ route('akreditasi_kategori.index') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kategori Akreditasi</p>
+                                    </a>
+                                </li>
+                                @can('super_admin')
                                     <li class="nav-item">
                                         <a href="{{ route('monev_master.index') }}" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Monev Akreditasi</p>
                                         </a>
                                     </li>
-                                </ul>
-                            </li>
-                        @endcan
+                                @endcan
+                            </ul>
+                        </li>
                         @can('admin')
                             <li class="nav-item">
                                 <a href="{{ route('kuesioner.index') }}" class="nav-link">
